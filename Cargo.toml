@@ -1,0 +1,25 @@
+[package]
+name = "clitest"
+version = "0.0.0"
+authors = ["replicadse <aw@voidpointergroup.com>"]
+edition = "2021"
+license = "MIT"
+description = "version control"
+homepage = "https://github.com/replicadse/clitest_rs"
+repository = "https://github.com/replicadse/clitest_rs"
+keywords = ["clitest"]
+categories = ["command-line-utilities"]
+readme = "docs/README.md"
+
+[lib]
+name = "clitest"
+path = "./src/lib.rs"
+
+[features]
+default = []
+
+[dependencies]
+anyhow = { version = "1.0.86", features = ["backtrace"] }
+
+[dev-dependencies]
+rusty-hook = "0.11.2"
