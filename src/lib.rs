@@ -64,8 +64,9 @@ impl CliTestOutput {
             Ok(self)
         } else {
             Err(anyhow::anyhow!(
-                "command failed with status: {}",
-                self.status
+                "command failed with status: {}\nstderr: {}",
+                self.status,
+                self.stderr_str(),
             ))
         }
     }
